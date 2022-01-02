@@ -1,0 +1,22 @@
+{
+  "name": "nodejswithgtl",
+  "version": "1.0.0",
+  "description": "My backend server with GTL",
+  "main": "express_server.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artb433/nodejsWithGTL.git"
+  },
+  "author": "artb433",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artb433/nodejsWithGTL/issues"
+  },
+  "homepage": "https://github.com/artb433/nodejsWithGTL#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
