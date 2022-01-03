@@ -1,13 +1,16 @@
-function addTodo(req , res){
+ function addTodo(req , res){
+
+}
+function updateTodoById(req, res){
+
+}
+ function getAllTodos(req , res){
+
+}
+function deleteTodoById(req , res){
 
 }
 
-function deleteTodo(req, res){
-
-}
-function updateTodo(req, res){
-
-}
-function getAllTodo(req , res){
-    
+module.exports = {
+    getAllTodos,updateTodoById,addTodo,deleteTodoById
 }
