@@ -1,15 +1,12 @@
 const express = require('express');
 const app = express();
+const todo_controller = require('./controllers/todo_controller');
 
-app.get('/',function(req,res){
-res.send('this is a GET request to /');
-})
-app.post('/',function(req,res){
-res.send('this is a POST request to /');
-})
-app.delete('/',function(req,res){
-res.send('this is a DELETE request to /');
-})
+
+app.get('/todos',todo_controller.getAllTodos)
+app.post('/todo',todo_controller.addTodo)
+app.delete('/todo',todo_controller.deleteTodo)
+app.patch('/todo',todo_controller.updateTodo)
 app.listen(6000, function(){
 console.log('App has started to run');
 })

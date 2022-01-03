@@ -1,24 +1,24 @@
 const http = require('http');
-const server = http.createServer(function(request,response){
-// console.log(request.method);
-if (request.method == 'POST' && request.url=='/'){
+const server = http.createServer(function(req,res){
+// console.log(req.method);
+if (req.method == 'POST' && req.url=='/'){
     // console.log('This is a post');
-    response.end('This is a post request')
-}else if(request.method == 'GET' && request.url=='/'){
+    res.end('This is a post req')
+}else if(req.method == 'GET' && req.url=='/'){
     // console.log('This is a get method');
-    response.end('This is a get request')
-}else if(request.method == 'PUT' && request.url=='/'){
+    res.end('This is a get req')
+}else if(req.method == 'PUT' && req.url=='/'){
     // console.log('This is a get method');
-    response.end('This is a put request')
-}else if(request.method == 'PATCH' && request.url=='/'){
+    res.end('This is a put req')
+}else if(req.method == 'PATCH' && req.url=='/'){
     // console.log('This is a get method');
-    response.end('This is a patch request')
-}else if(request.method == 'DELETE' && request.url=='/'){
+    res.end('This is a patch req')
+}else if(req.method == 'DELETE' && req.url=='/'){
     // console.log('This is a get method');
-    response.end('This is a delete request')
+    res.end('This is a delete req')
 }else {
-    // console.log('Ivalid request');
-    response.end('Invalid request made')
+    // console.log('Ivalid req');
+    res.end('Invalid req made')
 }
 });
 server.listen(7000, function(){
