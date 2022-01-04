@@ -11,16 +11,26 @@ try {
     res.status(404).json({message: 'can\'t add todo data'});
 }
 }
-function updateTodoById(req, res){
+async function updateTodoById(req, res){
 
 }
- function getAllTodos(req , res){
+async function getAllTodos(req , res){
+try {
+    const todos = await Todo.find();
+    res.status(200).json(todos);
+} catch (error) {
+    console.log('error fetching todos', error.message);
+    res.status(404).json({message: 'can\'t retrieve all todos'});
+}
+}
+function getTodoById(req, res){
 
 }
+
 function deleteTodoById(req , res){
 
 }
 
 module.exports = {
-    getAllTodos,updateTodoById,addTodo,deleteTodoById
+    getAllTodos,updateTodoById,addTodo,deleteTodoById,getTodoById
 }

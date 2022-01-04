@@ -6,9 +6,10 @@ const mongoose = require ('mongoose');
 app.use(express.json());
 
 app.get('/todos',todo_controller.getAllTodos);
-app.post('/todos',todo_controller.addTodo);
-app.patch('/todos',todo_controller.updateTodoById);
-app.delete('/todos',todo_controller.deleteTodoById);
+app.post('/todo',todo_controller.addTodo);
+app.patch('/todo',todo_controller.updateTodoById);
+app.delete('/todo',todo_controller.deleteTodoById);
+app.get('/todo', todo_controller.getTodoById);
 
 
 
@@ -21,5 +22,6 @@ mongoose.connect('mongodb+srv://nodeWithGTL:Drrahman76@cluster0.pib1g.mongodb.ne
 })
 .catch(function(error){
     console.log('Failed to connect:' , error.message);
+ 
 });
 });

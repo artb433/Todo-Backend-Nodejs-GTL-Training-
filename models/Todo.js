@@ -10,15 +10,18 @@ required:true,
 },
 isCompleted:{
     type: Boolean,
-required:true,
+default:false,
+required:true
 },
 deadline:{
     type: Date,
-required:true,
+    default:false,
+
 },
 startDate:{
     type: Date,
-required:true,
+    default: Date.now,
+required:true
 },
 });
 
