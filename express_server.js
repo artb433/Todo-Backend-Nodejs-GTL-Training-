@@ -4,15 +4,11 @@ const todo_controller = require('./controllers/todo_controller');
 const mongoose = require ('mongoose');
 
 app.use(express.json());
-
 app.get('/todos',todo_controller.getAllTodos);
-app.post('/todo',todo_controller.addTodo);
-app.patch('/todo',todo_controller.updateTodoById);
-app.delete('/todo',todo_controller.deleteTodoById);
-app.get('/todo', todo_controller.getTodoById);
-
-
-
+app.post('/todos',todo_controller.addTodo);
+app.patch('/todos/:todoId',todo_controller.updateTodoById);
+app.delete('/todos/:todoId',todo_controller.deleteTodoById);
+app.get('/todos/:todoId', todo_controller.getTodoById);
 
 app.listen(6000, function(){
 console.log('App has started to run');

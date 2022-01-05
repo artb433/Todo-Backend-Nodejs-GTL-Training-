@@ -5,18 +5,17 @@ title: {
 required:true,
 },
 category:{
-    type: String,
+type: String,
 required:true,
 },
 isCompleted:{
-    type: Boolean,
+type: Boolean,
 default:false,
 required:true
 },
 deadline:{
     type: Date,
     default:false,
-
 },
 startDate:{
     type: Date,
