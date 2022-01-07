@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 const express = require('express');
 const app = express();
 const todo_controller = require('./controllers/todo_controller');
@@ -12,7 +13,7 @@ app.get('/todos/:todoId', todo_controller.getTodoById);
 
 app.listen(6000, function(){
 console.log('App has started to run');
-mongoose.connect('mongodb+srv://nodeWithGTL:Drrahman76@cluster0.pib1g.mongodb.net/nodeWithGTL_DB?retryWrites=true&w=majority')
+mongoose.connect(process.env.DB_URL)
 .then(function(){
  console.log('Success: Connected to you DB');
 })

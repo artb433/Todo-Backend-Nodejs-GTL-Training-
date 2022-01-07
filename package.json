@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/artb433/nodejsWithGTL#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "jshint": "^2.13.2",
     "mongoose": "^6.1.4"
