@@ -5,7 +5,6 @@ const todo_controller = require('./controllers/todo_controller');
 const mongoose = require ('mongoose');
 require('dotenv').config();
 
-
 app.use(express.json());
 app.get('/todos',todo_controller.getAllTodos);
 app.post('/todos',todo_controller.addTodo);
