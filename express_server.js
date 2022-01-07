@@ -1,8 +1,10 @@
-import dotenv from 'dotenv';
+
 const express = require('express');
 const app = express();
 const todo_controller = require('./controllers/todo_controller');
 const mongoose = require ('mongoose');
+require('dotenv').config();
+
 
 app.use(express.json());
 app.get('/todos',todo_controller.getAllTodos);
