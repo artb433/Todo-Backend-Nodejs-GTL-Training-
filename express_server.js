@@ -1,9 +1,9 @@
-
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const todo_controller = require('./controllers/todo_controller');
 const mongoose = require ('mongoose');
-require('dotenv').config();
+
 const PORT = process.env.PORT || 6000;
 
 app.use(express.json());
