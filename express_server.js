@@ -7,6 +7,9 @@ const mongoose = require ('mongoose');
 const PORT = process.env.PORT || 6000;
 
 app.use(express.json());
+app.get('/',function(req,res){
+    res.status(200).json({message: 'Welcome to Art.b API with GTL'});
+})
 app.get('/todos',todo_controller.getAllTodos);
 app.post('/todos',todo_controller.addTodo);
 app.patch('/todos/:todoId',todo_controller.updateTodoById);
