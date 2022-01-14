@@ -15,7 +15,7 @@ required:true
 },
 deadline:{
     type: Date,
-    default:false,
+   required: true,
 },
 // startDate:{
 //     type: Date,
