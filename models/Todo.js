@@ -4,10 +4,10 @@ title: {
     type: String,
 required:true,
 },
-category:{
-type: String,
-required:true,
-},
+// category:{
+// type: String,
+// required:true,
+// },
 isCompleted:{
 type: Boolean,
 default:false,
@@ -17,11 +17,11 @@ deadline:{
     type: Date,
     default:false,
 },
-startDate:{
-    type: Date,
-    default: Date.now,
-required:true
-},
+// startDate:{
+//     type: Date,
+//     default: Date.now,
+// required:true
+// },
 });
 
 const Todo = mongoose.model('todo',todoSchema);
